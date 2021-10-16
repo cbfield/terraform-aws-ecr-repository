@@ -28,6 +28,11 @@ output "repository" {
   value       = aws_ecr_repository.repo
 }
 
+output "repository_policy" {
+  description = "The repository policy used to manage access to this repository"
+  value       = aws_ecr_repository_policy.repo_policy
+}
+
 output "scan_on_push" {
   description = "The provided value for var.scan_on_push"
   value       = var.scan_on_push
